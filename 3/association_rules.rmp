@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="10.1.002">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="10.1.002" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="10.1.002" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="/Users/dominikludwiczak/Library/CloudStorage/OneDrive-put.poznan.pl/semestr 4/Data Mining/3/marketbasket.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="UTF-8"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Hair Conditioner.true.integer.attribute"/>
+          <parameter key="1" value="Lemons.true.integer.attribute"/>
+          <parameter key="2" value="Standard coffee.true.integer.attribute"/>
+          <parameter key="3" value="Frozen Chicken Wings.true.integer.attribute"/>
+          <parameter key="4" value="98pct\. Fat Free Hamburger.true.integer.attribute"/>
+          <parameter key="5" value="Sugar Cookies.true.integer.attribute"/>
+          <parameter key="6" value="Onions.true.integer.attribute"/>
+          <parameter key="7" value="Deli Ham.true.integer.attribute"/>
+          <parameter key="8" value="Dishwasher Detergent.true.integer.attribute"/>
+          <parameter key="9" value="Beets.true.integer.attribute"/>
+          <parameter key="10" value="40 Watt Lightbulb.true.integer.attribute"/>
+          <parameter key="11" value="Ice Cream.true.integer.attribute"/>
+          <parameter key="12" value="Cottage Cheese.true.integer.attribute"/>
+          <parameter key="13" value="Plain English Muffins.true.integer.attribute"/>
+          <parameter key="14" value="Strawberry Soda.true.integer.attribute"/>
+          <parameter key="15" value="Vanilla Ice Cream.true.integer.attribute"/>
+          <parameter key="16" value="Potato Chips.true.integer.attribute"/>
+          <parameter key="17" value="Strawberry Yogurt.true.integer.attribute"/>
+          <parameter key="18" value="Diet Soda.true.integer.attribute"/>
+          <parameter key="19" value="D Cell Batteries.true.integer.attribute"/>
+          <parameter key="20" value="Paper Towels.true.integer.attribute"/>
+          <parameter key="21" value="Mint Chocolate Bar.true.integer.attribute"/>
+          <parameter key="22" value="Salsa Dip.true.integer.attribute"/>
+          <parameter key="23" value="Buttered Popcorn.true.integer.attribute"/>
+          <parameter key="24" value="Cheese Crackers.true.integer.attribute"/>
+          <parameter key="25" value="Chocolate Bar.true.integer.attribute"/>
+          <parameter key="26" value="Rice Soup.true.integer.attribute"/>
+          <parameter key="27" value="Mouthwash.true.integer.attribute"/>
+          <parameter key="28" value="Sugar.true.integer.attribute"/>
+          <parameter key="29" value="Cheese Flavored Chips.true.integer.attribute"/>
+          <parameter key="30" value="Sweat Potatoes.true.integer.attribute"/>
+          <parameter key="31" value="Deodorant.true.integer.attribute"/>
+          <parameter key="32" value="Waffles.true.integer.attribute"/>
+          <parameter key="33" value="Decaf Coffee.true.integer.attribute"/>
+          <parameter key="34" value="Smoked Turkey Sliced.true.integer.attribute"/>
+          <parameter key="35" value="Screw Driver.true.integer.attribute"/>
+          <parameter key="36" value="Sesame Oil.true.integer.attribute"/>
+          <parameter key="37" value="Red Wine.true.integer.attribute"/>
+          <parameter key="38" value="60 Watt Lightbulb.true.integer.attribute"/>
+          <parameter key="39" value="Cream Soda.true.integer.attribute"/>
+          <parameter key="40" value="Apple Fruit Roll.true.integer.attribute"/>
+          <parameter key="41" value="Noodle Soup.true.integer.attribute"/>
+          <parameter key="42" value="Ice Cream Sandwich.true.integer.attribute"/>
+          <parameter key="43" value="Soda Crackers.true.integer.attribute"/>
+          <parameter key="44" value="Lettuce.true.integer.attribute"/>
+          <parameter key="45" value="AA Cell Batteries.true.integer.attribute"/>
+          <parameter key="46" value="Honey Roasted Peanuts.true.integer.attribute"/>
+          <parameter key="47" value="Frozen Cheese Pizza.true.integer.attribute"/>
+          <parameter key="48" value="Tomato Soup.true.integer.attribute"/>
+          <parameter key="49" value="Manicotti.true.integer.attribute"/>
+          <parameter key="50" value="Toilet Bowl Cleaner.true.integer.attribute"/>
+          <parameter key="51" value="Liquid Laundry Detergent.true.integer.attribute"/>
+          <parameter key="52" value="Instant Rice.true.integer.attribute"/>
+          <parameter key="53" value="Green Pepper.true.integer.attribute"/>
+          <parameter key="54" value="Frozen Broccoli.true.integer.attribute"/>
+          <parameter key="55" value="Chardonnay Wine.true.integer.attribute"/>
+          <parameter key="56" value="Brown Sugar Grits.true.integer.attribute"/>
+          <parameter key="57" value="Canned Peas.true.integer.attribute"/>
+          <parameter key="58" value="Skin Moisturizer.true.integer.attribute"/>
+          <parameter key="59" value="Avocado Dip.true.integer.attribute"/>
+          <parameter key="60" value="Blueberry Muffins.true.integer.attribute"/>
+          <parameter key="61" value="Apple Cinnamon Waffles.true.integer.attribute"/>
+          <parameter key="62" value="Chablis Wine.true.integer.attribute"/>
+          <parameter key="63" value="Cantaloupe.true.integer.attribute"/>
+          <parameter key="64" value="Shrimp Cocktail Sauce.true.integer.attribute"/>
+          <parameter key="65" value="100 Watt Lightbulb.true.integer.attribute"/>
+          <parameter key="66" value="Whole Green Beans.true.integer.attribute"/>
+          <parameter key="67" value="Turkey TV Dinner.true.integer.attribute"/>
+          <parameter key="68" value="Wash Towels.true.integer.attribute"/>
+          <parameter key="69" value="Dog Food.true.integer.attribute"/>
+          <parameter key="70" value="Cat Food.true.integer.attribute"/>
+          <parameter key="71" value="Frozen Sausage Pizza.true.integer.attribute"/>
+          <parameter key="72" value="Frosted Donuts.true.integer.attribute"/>
+          <parameter key="73" value="Shrimp.true.integer.attribute"/>
+          <parameter key="74" value="Summer Sausage.true.integer.attribute"/>
+          <parameter key="75" value="Plums.true.integer.attribute"/>
+          <parameter key="76" value="Mild Cheddar Cheese.true.integer.attribute"/>
+          <parameter key="77" value="Cream of Wheat.true.integer.attribute"/>
+          <parameter key="78" value="Fresh Lima Beans.true.integer.attribute"/>
+          <parameter key="79" value="Flavored Fruit Bars.true.integer.attribute"/>
+          <parameter key="80" value="Mushrooms.true.integer.attribute"/>
+          <parameter key="81" value="Flour.true.integer.attribute"/>
+          <parameter key="82" value="Plain Rye Bread.true.integer.attribute"/>
+          <parameter key="83" value="Jelly Filled Donuts.true.integer.attribute"/>
+          <parameter key="84" value="Apple Sauce.true.integer.attribute"/>
+          <parameter key="85" value="Hot Chicken Wings.true.integer.attribute"/>
+          <parameter key="86" value="Orange Juice.true.integer.attribute"/>
+          <parameter key="87" value="Strawberry Jam.true.integer.attribute"/>
+          <parameter key="88" value="Chocolate Chip Cookies.true.integer.attribute"/>
+          <parameter key="89" value="Vegetable Soup.true.integer.attribute"/>
+          <parameter key="90" value="Oats and Nuts Cereal.true.integer.attribute"/>
+          <parameter key="91" value="Fruit Roll.true.integer.attribute"/>
+          <parameter key="92" value="Corn Oil.true.integer.attribute"/>
+          <parameter key="93" value="Corn Flake Cereal.true.integer.attribute"/>
+          <parameter key="94" value="75 Watt Lightbulb.true.integer.attribute"/>
+          <parameter key="95" value="Mushroom Pizza - Frozen.true.integer.attribute"/>
+          <parameter key="96" value="Sour Cream.true.integer.attribute"/>
+          <parameter key="97" value="Deli Salad.true.integer.attribute"/>
+          <parameter key="98" value="Deli Turkey.true.integer.attribute"/>
+          <parameter key="99" value="Glass Cleaner.true.integer.attribute"/>
+          <parameter key="100" value="Brown Sugar.true.integer.attribute"/>
+          <parameter key="101" value="English Muffins.true.integer.attribute"/>
+          <parameter key="102" value="Apple Soda.true.integer.attribute"/>
+          <parameter key="103" value="Strawberry Preserves.true.integer.attribute"/>
+          <parameter key="104" value="Pepperoni Pizza - Frozen.true.integer.attribute"/>
+          <parameter key="105" value="Plain Oatmeal.true.integer.attribute"/>
+          <parameter key="106" value="Beef Soup.true.integer.attribute"/>
+          <parameter key="107" value="Trash Bags.true.integer.attribute"/>
+          <parameter key="108" value="Corn Chips.true.integer.attribute"/>
+          <parameter key="109" value="Tangerines.true.integer.attribute"/>
+          <parameter key="110" value="Hot Dogs.true.integer.attribute"/>
+          <parameter key="111" value="Can Opener.true.integer.attribute"/>
+          <parameter key="112" value="Dried Apples.true.integer.attribute"/>
+          <parameter key="113" value="Grape Juice.true.integer.attribute"/>
+          <parameter key="114" value="Carrots.true.integer.attribute"/>
+          <parameter key="115" value="Frozen Shrimp.true.integer.attribute"/>
+          <parameter key="116" value="Grape Fruit Roll.true.integer.attribute"/>
+          <parameter key="117" value="Merlot Wine.true.integer.attribute"/>
+          <parameter key="118" value="Raisins.true.integer.attribute"/>
+          <parameter key="119" value="Cranberry Juice.true.integer.attribute"/>
+          <parameter key="120" value="Shampoo.true.integer.attribute"/>
+          <parameter key="121" value="Pancake Mix.true.integer.attribute"/>
+          <parameter key="122" value="Paper Plates.true.integer.attribute"/>
+          <parameter key="123" value="Bologna.true.integer.attribute"/>
+          <parameter key="124" value="2pct\. Milk.true.integer.attribute"/>
+          <parameter key="125" value="Daily Newspaper.true.integer.attribute"/>
+          <parameter key="126" value="Popcorn Salt.true.integer.attribute"/>
+          <parameter key="127" value="Frozen Cauliflower.true.integer.attribute"/>
+          <parameter key="128" value="Vanilla Wafers.true.integer.attribute"/>
+          <parameter key="129" value="Tomatoes.true.integer.attribute"/>
+          <parameter key="130" value="Vegetable Oil.true.integer.attribute"/>
+          <parameter key="131" value="Chicken Soup.true.integer.attribute"/>
+          <parameter key="132" value="Eggs.true.integer.attribute"/>
+          <parameter key="133" value="Canned Mixed Fruit.true.integer.attribute"/>
+          <parameter key="134" value="Raisin Pudding.true.integer.attribute"/>
+          <parameter key="135" value="Celery.true.integer.attribute"/>
+          <parameter key="136" value="Oatmeal.true.integer.attribute"/>
+          <parameter key="137" value="Hot Chocolate.true.integer.attribute"/>
+          <parameter key="138" value="Spaghetti.true.integer.attribute"/>
+          <parameter key="139" value="Napkins.true.integer.attribute"/>
+          <parameter key="140" value="Blueberry Waffles.true.integer.attribute"/>
+          <parameter key="141" value="White Bread.true.integer.attribute"/>
+          <parameter key="142" value="Grape Jelly.true.integer.attribute"/>
+          <parameter key="143" value="Cheese Spread.true.integer.attribute"/>
+          <parameter key="144" value="Steak TV Dinner.true.integer.attribute"/>
+          <parameter key="145" value="Fudge Cookies.true.integer.attribute"/>
+          <parameter key="146" value="Chicken Breast - Frozen.true.integer.attribute"/>
+          <parameter key="147" value="Diet Cola.true.integer.attribute"/>
+          <parameter key="148" value="Limes.true.integer.attribute"/>
+          <parameter key="149" value="Sharp Cheddar Cheese.true.integer.attribute"/>
+          <parameter key="150" value="Cabbage.true.integer.attribute"/>
+          <parameter key="151" value="Nasal Spray.true.integer.attribute"/>
+          <parameter key="152" value="Dried Apricots.true.integer.attribute"/>
+          <parameter key="153" value="Cola.true.integer.attribute"/>
+          <parameter key="154" value="Plastic Knives.true.integer.attribute"/>
+          <parameter key="155" value="Liquid Soap.true.integer.attribute"/>
+          <parameter key="156" value="Toothbrush.true.integer.attribute"/>
+          <parameter key="157" value="Cranberry Muffins.true.integer.attribute"/>
+          <parameter key="158" value="Peaches.true.integer.attribute"/>
+          <parameter key="159" value="Apples.true.integer.attribute"/>
+          <parameter key="160" value="Regular Hamburger.true.integer.attribute"/>
+          <parameter key="161" value="Chardonnay.true.integer.attribute"/>
+          <parameter key="162" value="Sunglasses.true.integer.attribute"/>
+          <parameter key="163" value="Turkey Noodle Soup.true.integer.attribute"/>
+          <parameter key="164" value="Frozen Carrots.true.integer.attribute"/>
+          <parameter key="165" value="Bananas.true.integer.attribute"/>
+          <parameter key="166" value="Sandwich Bags.true.integer.attribute"/>
+          <parameter key="167" value="C Cell Batteries.true.integer.attribute"/>
+          <parameter key="168" value="Import Beer.true.integer.attribute"/>
+          <parameter key="169" value="Hot Dog Buns.true.integer.attribute"/>
+          <parameter key="170" value="Pepper.true.integer.attribute"/>
+          <parameter key="171" value="Plain Bagels.true.integer.attribute"/>
+          <parameter key="172" value="Window Cleaner.true.integer.attribute"/>
+          <parameter key="173" value="Oranges.true.integer.attribute"/>
+          <parameter key="174" value="Microwave Popcorn.true.integer.attribute"/>
+          <parameter key="175" value="Toothpaste.true.integer.attribute"/>
+          <parameter key="176" value="Blueberry Bagels.true.integer.attribute"/>
+          <parameter key="177" value="Apple Jam.true.integer.attribute"/>
+          <parameter key="178" value="Whole Corn.true.integer.attribute"/>
+          <parameter key="179" value="Fruit Drink.true.integer.attribute"/>
+          <parameter key="180" value="Cauliflower.true.integer.attribute"/>
+          <parameter key="181" value="French Roast Coffee.true.integer.attribute"/>
+          <parameter key="182" value="Buttermilk.true.integer.attribute"/>
+          <parameter key="183" value="Beef Hot Dogs.true.integer.attribute"/>
+          <parameter key="184" value="Black-eyed Peas.true.integer.attribute"/>
+          <parameter key="185" value="Ground Beef.true.integer.attribute"/>
+          <parameter key="186" value="Peanut Butter Cookies.true.integer.attribute"/>
+          <parameter key="187" value="Strawberry Drink.true.integer.attribute"/>
+          <parameter key="188" value="Cinnamon Oatmeal.true.integer.attribute"/>
+          <parameter key="189" value="Pastry Snacks.true.integer.attribute"/>
+          <parameter key="190" value="Grape Jam.true.integer.attribute"/>
+          <parameter key="191" value="Mandarin Oranges.true.integer.attribute"/>
+          <parameter key="192" value="Mango Drink.true.integer.attribute"/>
+          <parameter key="193" value="Taco Salad.true.integer.attribute"/>
+          <parameter key="194" value="Pretzels.true.integer.attribute"/>
+          <parameter key="195" value="Plain Blueberry Muffins.true.integer.attribute"/>
+          <parameter key="196" value="Canned Tuna.true.integer.attribute"/>
+          <parameter key="197" value="Licorice.true.integer.attribute"/>
+          <parameter key="198" value="Garlic Bread.true.integer.attribute"/>
+          <parameter key="199" value="Roasted Chicken.true.integer.attribute"/>
+          <parameter key="200" value="Frozen Peas.true.integer.attribute"/>
+          <parameter key="201" value="Hamburger Buns.true.integer.attribute"/>
+          <parameter key="202" value="Multi-Grain Wheat Bread.true.integer.attribute"/>
+          <parameter key="203" value="Tissue.true.integer.attribute"/>
+          <parameter key="204" value="Rye Bread.true.integer.attribute"/>
+          <parameter key="205" value="Peach Shampoo.true.integer.attribute"/>
+          <parameter key="206" value="French Fries.true.integer.attribute"/>
+          <parameter key="207" value="Raspberry Fruit Roll.true.integer.attribute"/>
+          <parameter key="208" value="Sesame Crackers.true.integer.attribute"/>
+          <parameter key="209" value="Heavy Duty Cleaner.true.integer.attribute"/>
+          <parameter key="210" value="Ramen Noodles.true.integer.attribute"/>
+          <parameter key="211" value="Soft Tissue.true.integer.attribute"/>
+          <parameter key="212" value="Orange Flavored Fruit Bars.true.integer.attribute"/>
+          <parameter key="213" value="Cheese.true.integer.attribute"/>
+          <parameter key="214" value="Flathead Screwdriver.true.integer.attribute"/>
+          <parameter key="215" value="Polish Sausage.true.integer.attribute"/>
+          <parameter key="216" value="Apple Drink.true.integer.attribute"/>
+          <parameter key="217" value="Domestic Beer.true.integer.attribute"/>
+          <parameter key="218" value="Mixed Nuts.true.integer.attribute"/>
+          <parameter key="219" value="Chicken TV Dinner.true.integer.attribute"/>
+          <parameter key="220" value="Tissues.true.integer.attribute"/>
+          <parameter key="221" value="Garlic.true.integer.attribute"/>
+          <parameter key="222" value="Dried Fruit Mix.true.integer.attribute"/>
+          <parameter key="223" value="Cole Slaw.true.integer.attribute"/>
+          <parameter key="224" value="Donuts.true.integer.attribute"/>
+          <parameter key="225" value="Sliced Turkey.true.integer.attribute"/>
+          <parameter key="226" value="Sliced Chicken.true.integer.attribute"/>
+          <parameter key="227" value="Broccoli.true.integer.attribute"/>
+          <parameter key="228" value="Ranch Dip.true.integer.attribute"/>
+          <parameter key="229" value="Sponge.true.integer.attribute"/>
+          <parameter key="230" value="Frozen Corn.true.integer.attribute"/>
+          <parameter key="231" value="Paper Cups.true.integer.attribute"/>
+          <parameter key="232" value="Wheat Bread.true.integer.attribute"/>
+          <parameter key="233" value="Oven Cleaner.true.integer.attribute"/>
+          <parameter key="234" value="Tomato Sauce.true.integer.attribute"/>
+          <parameter key="235" value="Plastic Forks.true.integer.attribute"/>
+          <parameter key="236" value="Popcorn.true.integer.attribute"/>
+          <parameter key="237" value="Creamy Peanut Butter.true.integer.attribute"/>
+          <parameter key="238" value="Sweet Relish.true.integer.attribute"/>
+          <parameter key="239" value="Plain Muffins.true.integer.attribute"/>
+          <parameter key="240" value="Cheese Dip.true.integer.attribute"/>
+          <parameter key="241" value="Colby Cheese.true.integer.attribute"/>
+          <parameter key="242" value="Chicken Noodle Soup.true.integer.attribute"/>
+          <parameter key="243" value="Fingernail Clippers.true.integer.attribute"/>
+          <parameter key="244" value="Corned Beef.true.integer.attribute"/>
+          <parameter key="245" value="Lollipops.true.integer.attribute"/>
+          <parameter key="246" value="Plain White Bread.true.integer.attribute"/>
+          <parameter key="247" value="Blueberry Yogurt.true.integer.attribute"/>
+          <parameter key="248" value="Frozen Chicken Thighs.true.integer.attribute"/>
+          <parameter key="249" value="Mixed Vegetables.true.integer.attribute"/>
+          <parameter key="250" value="Souring Pads.true.integer.attribute"/>
+          <parameter key="251" value="Tuna Spread.true.integer.attribute"/>
+          <parameter key="252" value="Toilet Paper.true.integer.attribute"/>
+          <parameter key="253" value="White Wine.true.integer.attribute"/>
+          <parameter key="254" value="Columbian Coffee.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="numerical_to_binominal" compatibility="10.1.002" expanded="true" height="82" name="Numerical to Binominal" width="90" x="179" y="34">
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="numeric"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="0.0"/>
+      </operator>
+      <operator activated="true" class="concurrency:fp_growth" compatibility="10.1.002" expanded="true" height="82" name="FP-Growth" width="90" x="313" y="34">
+        <parameter key="input_format" value="items in dummy coded columns"/>
+        <parameter key="item_separators" value="|"/>
+        <parameter key="use_quotes" value="false"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="trim_item_names" value="true"/>
+        <parameter key="min_requirement" value="support"/>
+        <parameter key="min_support" value="0.01"/>
+        <parameter key="min_frequency" value="100"/>
+        <parameter key="min_items_per_itemset" value="1"/>
+        <parameter key="max_items_per_itemset" value="0"/>
+        <parameter key="max_number_of_itemsets" value="1000000"/>
+        <parameter key="find_min_number_of_itemsets" value="false"/>
+        <parameter key="min_number_of_itemsets" value="100"/>
+        <parameter key="max_number_of_retries" value="100"/>
+        <parameter key="requirement_decrease_factor" value="0.9"/>
+        <enumeration key="must_contain_list"/>
+      </operator>
+      <operator activated="true" class="create_association_rules" compatibility="10.1.002" expanded="true" height="82" name="Create Association Rules" width="90" x="447" y="34">
+        <parameter key="criterion" value="confidence"/>
+        <parameter key="min_confidence" value="0.8"/>
+        <parameter key="min_criterion_value" value="0.8"/>
+        <parameter key="gain_theta" value="2.0"/>
+        <parameter key="laplace_k" value="1.0"/>
+      </operator>
+      <operator activated="true" class="item_sets_to_data" compatibility="10.1.002" expanded="true" height="82" name="Item Sets to Data" width="90" x="581" y="34">
+        <parameter key="generate_item_set_indicators" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Numerical to Binominal" to_port="example set input"/>
+      <connect from_op="Numerical to Binominal" from_port="example set output" to_op="FP-Growth" to_port="example set"/>
+      <connect from_op="FP-Growth" from_port="frequent sets" to_op="Create Association Rules" to_port="item sets"/>
+      <connect from_op="Create Association Rules" from_port="item sets" to_op="Item Sets to Data" to_port="frequent item sets"/>
+      <connect from_op="Item Sets to Data" from_port="example set" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
