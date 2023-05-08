@@ -1,0 +1,11 @@
+md5: eb47ad7d444e1f1bd3c397fb4af43476
+frozen: true
+deps:
+- path: data/adult.data
+  repo:
+    url: https://github.com/megaduks/dvc-tutorial/
+    rev_lock: a0d82b86e0936e12cfe4e9986ad78a4781f70d86
+outs:
+- md5: 5d7c39d7b8804f071cdd1f2a7c460872
+  size: 3974305
+  path: adult.data

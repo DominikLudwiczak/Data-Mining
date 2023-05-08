@@ -1,0 +1,42 @@
+stages:
+  prepare:
+    cmd: python3 prepare.py data/adult.data
+    deps:
+    - data/adult.data
+    - prepare.py
+    params:
+    - prepare.seed
+    - prepare.split
+    outs:
+    - data/prepared
+  featurize:
+    cmd: python3 featurize.py data/prepared/ data/features/
+    deps:
+    - data/prepared/
+    - featurize.py
+    params:
+    - featurize.degree
+    outs:
+    - data/features
+  train:
+    cmd: python3 train.py data/features/ data/models/
+    deps:
+    - data/features/
+    - train.py
+    params:
+    - train.max_depth
+    - train.n_estimators
+    outs:
+    - data/models/
+  evaluate:
+    cmd: python3 evaluate.py data/models/ data/features/ scores.json prc.json
+    deps:
+    - data/features/
+    - data/models/
+    - evaluate.py
+    metrics:
+    - scores.json:
+        cache: false
+    plots:
+    - prc.json:
+        cache: false

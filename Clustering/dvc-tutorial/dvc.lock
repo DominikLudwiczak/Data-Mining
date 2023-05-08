@@ -1,0 +1,78 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python3 prepare.py data/adult.data
+    deps:
+    - path: data/adult.data
+      md5: 5d7c39d7b8804f071cdd1f2a7c460872
+      size: 3974305
+    - path: prepare.py
+      md5: 6fca34a12d7ade23400f31560bb3b1bb
+      size: 641
+    params:
+      params.yaml:
+        prepare.seed: 42
+        prepare.split: 0.75
+    outs:
+    - path: data/prepared
+      md5: f39bac9fe8ada20ba7ff1c682bb71f0a.dir
+      size: 3995626
+      nfiles: 2
+  featurize:
+    cmd: python3 featurize.py data/prepared/ data/features/
+    deps:
+    - path: data/prepared/
+      md5: f39bac9fe8ada20ba7ff1c682bb71f0a.dir
+      size: 3995626
+      nfiles: 2
+    - path: featurize.py
+      md5: f791036777340b82f64737afd45d37cb
+      size: 1543
+    params:
+      params.yaml:
+        featurize.degree: 2
+    outs:
+    - path: data/features
+      md5: 0a230b6d7967de41ec2e8670d7b85176.dir
+      size: 27871684
+      nfiles: 2
+  train:
+    cmd: python3 train.py data/features/ data/models/
+    deps:
+    - path: data/features/
+      md5: 0a230b6d7967de41ec2e8670d7b85176.dir
+      size: 27871684
+      nfiles: 2
+    - path: train.py
+      md5: a9d3ca4de3b596d611814e5442639d8d
+      size: 680
+    params:
+      params.yaml:
+        train.max_depth: 3
+        train.n_estimators: 25
+    outs:
+    - path: data/models/
+      md5: 3abddd79580bf55cda09c04e6aed5039.dir
+      size: 35757
+      nfiles: 1
+  evaluate:
+    cmd: python3 evaluate.py data/models/ data/features/ scores.json prc.json
+    deps:
+    - path: data/features/
+      md5: 0a230b6d7967de41ec2e8670d7b85176.dir
+      size: 27871684
+      nfiles: 2
+    - path: data/models/
+      md5: 3abddd79580bf55cda09c04e6aed5039.dir
+      size: 35757
+      nfiles: 1
+    - path: evaluate.py
+      md5: 21386235fbd40d622f112c896a0404cf
+      size: 920
+    outs:
+    - path: prc.json
+      md5: 4d73ce3296b1704d05b66fc53ab58f5d
+      size: 150262
+    - path: scores.json
+      md5: 9fcbea86502bacec40488d387de7f6d2
+      size: 27
