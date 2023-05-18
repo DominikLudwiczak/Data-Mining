@@ -1,8 +1,0 @@
-prepare:
-  split: 0.75
-  seed: 42
-featurize:
-  degree: 2
-train:
-  max_depth: 3
-  n_estimators: 25
